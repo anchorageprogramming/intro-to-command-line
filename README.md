@@ -1,4 +1,27 @@
-intro-to-command-line
+Introduction to the Command Line
 =====================
 
-An introduction to the command line
+What is the command line?
+
+Why is it awesome?
+
+Navigate
+	pwd
+	cd
+	
+Look at stuff
+	ls
+	more / less
+	file ?
+
+Make stuff
+	mkdir
+	nano
+	cp
+	rm
+	mv
+
+Find stuff
+	grep
+	man
+	find
