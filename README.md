@@ -6,22 +6,22 @@ What is the command line?
 Why is it awesome?
 
 Navigate
-	pwd
-	cd
+	* pwd
+	* cd
 	
 Look at stuff
-	ls
-	more / less
-	file ?
+	* ls
+	* more / less
+	* file ?
 
 Make stuff
-	mkdir
-	nano
-	cp
-	rm
-	mv
+	* mkdir
+	* nano
+	* cp
+	* rm
+	* mv
 
 Find stuff
-	grep
-	man
-	find
+	* grep
+	* man
+	* find
