@@ -11,7 +11,7 @@ Control! You can type commands out and control _exactly_ what your computer is d
 
 We'll be using [Nitrous.IO](https://www.nitrous.io). This is a really powerful tool, and we're only using a small part of it for this workshop. Definitely feel free to play with some of its functionality on your own! 
 
-You can set up your account before the workshop, if you want! [Here are directions](APW-NitrousIO.pdf).
+You can set up your account before the workshop, if you want! [Here are directions](https://github.com/anchorageprogramming/intro-to-command-line/blob/master/APW-NitrousIO.pdf?raw=true).
 
 ## Navigate
 * pwd
