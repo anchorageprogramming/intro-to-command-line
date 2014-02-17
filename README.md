@@ -95,6 +95,8 @@ When you have the Nitrous console taking up the full screen, continue to the com
   The output should be 
   *myfile*
 
+  You have just listed ("ls" - list) the contents of the current directory.
+
   For fun, let's change directory up one level and look at what's inside that directory:
 
   **cd ..**
@@ -104,6 +106,12 @@ When you have the Nitrous console taking up the full screen, continue to the com
   *[your name] README.md workspace* &mdash; the order might vary, based on where your name falls in the alphabet; that's fine
 
   Now, change directory back into [your name], and make sure you're in the right place with **pwd**
+
+  One more thing: you can list the contents of directories other than the one you're in. 
+
+  Type **ls ..**
+
+  The output should match what happened when you changed directory up a level and listed its contents, a moment ago.
 
 * more / less
 
@@ -117,13 +125,26 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   It turns out, *less* is a bit more complex. For big files, *more* will let you go through it all in order, where *less* will let you scroll through it, both forward and backward. 
 
-* file ?
+  If you use either *more* or *less* on a file (or any stream of data &mdash; we'll do something fancy with *more* later, so you can see what I mean), you can escape by hitting **q** (short for "quit").
+
+* file 
+
+  Let's say you don't know what type of file *myfile* is. No biggie. 
+
+  Type **file myfile**
+
+  The output should be
+  *myfile: ASCII text*
 
 ## Move stuff
 
 * cp
 
-  Oh, but we forgot to add an extension, showing that it's a text file, didn't we? Not a problem. We can copy this file and give it a new name in the process.
+  Oh, but we forgot to add an extension, showing that it's a text file, didn't we? Not a problem. 
+
+  Type **cp myfile myfile.txt**
+
+  And then, to see how it worked, list the contents of the current directory.
 
 * rm
 * mv
@@ -134,5 +155,8 @@ When you have the Nitrous console taking up the full screen, continue to the com
 * find
 
 ## Just a couple more things....
+* capitalization
+* flags
+* piping to more
 * python
 * ctrl-c
