@@ -238,3 +238,6 @@ When you have the Nitrous console taking up the full screen, continue to the com
 * ctrl-c
 
   You can stop the current command from running by hitting **ctrl-c** (Need an example of a slow command, so people can try it...)
+
+
+  (Special thanks to [Eric](http://acrl.ala.org/techconnect/?p=3248) and [Nicholas](http://www.slideshare.net/nnschiller/shell-tutorial-28653333) for ideas/examples!)
