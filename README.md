@@ -6,7 +6,7 @@ Introduction to the Command Line
 
 ## What is the command line?
 
-The Command Line Interface (CLI) is a text-only interface to your computer. You can use it to access folders, files, settings&mdash;pretty much anything you would want to do on a computer. 
+The Command Line Interface (CLI) is a text-only interface to your computer. You can use it to access folders, files, settings&mdash;pretty much anything you would want to do on a computer. There is a version of the command line interface available on Windows, Mac OS, and [especially!] Linux/UNIX systems. For this workshop, for instance, we're going to be using Linux via a tool called Nitrous.IO. 
 
 ## Why is it awesome?
 
@@ -182,7 +182,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   Whoa, right? Here, try this:
 
-  **ls | more** 
+  **ls | more** &mdash; that character in the middle is the horizontal line, usually located above the "enter" key on your keyboard
 
   *WHOA, RIGHT?* &mdash; This technique is referred to as "piping output to more", which is a very useful thing to keep in your toolbox when you're faced with large files, or, in this case, large output streams from commands. (It is reasonable to have questions about this. Ask!) As you can see, you can hit **enter** to keep scrolling through the whole file list; when you're tired of looking at the list, remember, you can type **q** to get out of *more*.
 
@@ -198,21 +198,43 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   Type **grep verbose pygettext2.7** &mdash; remember that you can use tab completion on the filename!
 
-  You'll see output something like this:
-      --verbose                                                                                                         
+  You'll see output something like this (but better-indented):
+    *--verbose                                                                                                         
              'style=', 'verbose', 'version', 'width=', 'exclude-file=',                                                   
         verbose = 0                                                                                                       
         elif opt in ('-v', '--verbose'):                                                                                  
             options.verbose = 1                                                                                           
             if options.verbose:                                                                                           
-            if options.verbose: 
+            if options.verbose:*
+
+  What's happening? The command *grep* searches within a file for instances of a particular set of characters, in this case "verbose". (It doesn't have to be a whole word. Any character string will work. And, yes, capitalization DOES matter.) The output shows you all of the places "verbose" appears within the file *pygettext2.7*.
+
+  It's time to learn another important tool: flags. 
+
+  Type **grep -n verbose pygettext2.7**
+
+  Now the output has line numbers! The *-n* flag told the command *grep* that you want to know what line number each instance of the character string "verbose" appeared on. 
 
 * man
-* find
+
+  Want to know more about how to use *grep*, or any other command? Use *man*
+
+  Type **man grep**
+
+  As you can see, there are a number of flags and options available. 
+
+  Feel free to scroll through, or to hit **q** to exit.
+
+  (Real talk: I usually Google any command I want to use, if that option is available to me, rather than using *man*. Different people have different preferences for finding information.)
 
 ## Just a couple more things....
-* capitalization
-* flags
+
 * up arrow
-* python
+
+  Hit the **up arrow** (↑)
+
+  The last command you typed (probably *man grep*) is now on the command line! If you keep hitting the up arrow, you can scroll through your command history. This saves a lot of time when you're typing long commands that you need to use more than once!
+
 * ctrl-c
+
+  You can stop the current command from running by hitting **ctrl-c** (Need an example of a slow command, so people can try it...)
