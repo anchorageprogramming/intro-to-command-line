@@ -27,7 +27,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
 * pwd
 
-  Type **pwd** into the terminal.
+  Type **pwd** into the terminal and hit **enter**. (The "enter" is going to be assumed after all of your commands, from this point.)
 
   You should see output that looks something like
   */home/action*
@@ -111,7 +111,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   Type **ls ..**
 
-  The output should match what happened when you changed directory up a level and listed its contents, a moment ago.
+  The output should match what happened when you changed directory up a level and listed its contents, a moment ago, but you didn't have to change directory to see it! (Type **pwd** and confirm you're still in the same place, if you have doubts. :))
 
 * more / less
 
@@ -144,19 +144,75 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   Type **cp myfile myfile.txt**
 
-  And then, to see how it worked, list the contents of the current directory.
+  And then, to see how it worked, list the contents of the current directory. The output should be
+  *myfile myfile.txt*
+
+  Now you have the original, *myfile*, plus an exact copy ("cp" - copy) with a different name, *myfile.txt*
 
 * rm
+
+  Now you have a file you don't need. No problem! 
+
+  Type **rm myfile** &mdash; and then list the contents of the directory; the output should be
+  *myfile.txt*
+
+  You've just removed ("rm" - remove) *myfile*.
+
+  **This is a command to use carefully! Removing things is _serious business_.**
+
 * mv
 
+  Copying and deleting is a little tedious. There's a way to do the same thing in one step:
+
+  Type **mv myfile.txt mynewfile.txt** &mdash; and then list the contents of the directory; the output should be
+  *mynewfile.txt*
+
+  You just *moved* ("mv" - move) a file. (You might ask why the command isn't "change name," or something. Valid question. This command *is* used for changing filenames, but it is also used for moving files between directories.)
+
+  If you want to try copying or moving your file out of */home/action/[your name]* and into */home/action*, for instance, here's the command:
+  **cp mynewfile.txt ../mynewfile.txt** &mdash; you can replace 'cp' with 'mv', but if you do, please move it back by typing **mv ../mynewfile.txt mynewfile.txt**
+
 ## Find stuff
+
+  To show you how to find things, we're going to have to go further afield. And we're going to digress for a moment.
+  
+  Type **cd /usr/bin**
+
+  Type **ls**
+
+  Whoa, right? Here, try this:
+
+  **ls | more** 
+
+  *WHOA, RIGHT?* &mdash; This technique is referred to as "piping output to more", which is a very useful thing to keep in your toolbox when you're faced with large files, or, in this case, large output streams from commands. (It is reasonable to have questions about this. Ask!) As you can see, you can hit **enter** to keep scrolling through the whole file list; when you're tired of looking at the list, remember, you can type **q** to get out of *more*.
+
+  One more tool for our toolset, before we move on:
+
+  Did you see the sequence of files, *pygettext*, *pygettext2.5*, *pygettext2.6*, etc.? (They're later in the alphabet, so you're more likely to see them on an *ls* than on an *ls | more*. No biggie if you don't go looking for them. Just believe me that they're there, OK?)
+
+  Type **more pyg** _and then hit the **tab** key_. &mdash; your command should now say **more pygettext**. That's right; it will try to complete file names for you after you've started typing them, if you hit *tab*. Tab completion is AMAZING. But it's got limits, of course. The file you actually want is pygettext2.7; but because there are multiple files that all start with "pygettext", it completed as far as it could, and you'll have to specify further by finishing the filename yourself. 
+
+  Make sure the command line says **more pygettext2.7** and hit **enter** &mdash; browse the file if you want, and hit *q* at any point to get out of *more* &mdash; big file, right?
+
 * grep
+
+  Type **grep verbose pygettext2.7** &mdash; remember that you can use tab completion on the filename!
+
+  You'll see output something like this:
+      --verbose                                                                                                         
+             'style=', 'verbose', 'version', 'width=', 'exclude-file=',                                                   
+        verbose = 0                                                                                                       
+        elif opt in ('-v', '--verbose'):                                                                                  
+            options.verbose = 1                                                                                           
+            if options.verbose:                                                                                           
+            if options.verbose: 
+
 * man
 * find
 
 ## Just a couple more things....
 * capitalization
 * flags
-* piping to more
+* up arrow
 * python
 * ctrl-c
