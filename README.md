@@ -52,16 +52,81 @@ When you have the Nitrous console taking up the full screen, continue to the com
   Now, as you can see, you're back where you started, in */home/action*.
 
 ## Make stuff
+
 * mkdir
+
+  What if you aren't satisfied with the directories that are available to you? (Long-term, this is inevitable, right? You probably won't want to store all of your files in one place.) No problem!
+
+  Type **mkdir [your name]** &mdash; but don't literally type that; replace "[your name]" with your actual first name :) 
+
+  Now change directory into the directory with your name. Scroll up for a reminder about changing directories, if you need it. Remember to use **pwd** to make sure you're in the right place.
+	
 * nano
+
+  It's time to make a text file! There are lots of text editors available&mdash;and lots of strong opinions about which is the best one&mdash;but for today, we're going to use a simple one. It'll work great for anything you want to do, from writing to-do lists to writing code. 
+
+  Type **nano myfile**
+  And then *don't panic* when the screen changes entirely! 
+
+  You're inside an application, inside the command line. (How cool is that?) As you can see, there are commands along the bottom. Where you see a caret (^), it means you hold down the ctrl key along with that letter to execute that command. But first let's enter some text, before we worry about any of the commands.
+
+  Type **whatever you like**. I typed "Hi, my name is Coral. I like birds and chinchillas and coffee." Pretty much anything will do. 
+
+  Once you've entered some text, hold down the *ctrl key* and hit *X* (shortened from now on to *ctrl-x*)
+
+  A prompt appears at the bottom of the screen: *Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?*
+
+  Type *y* 
+
+  The prompt now asks if this is the filename you want to write. It is, so
+
+  Hit *enter*
+
+  Congratulations! You just made a text file!
+
+## Look at stuff
+
+* ls
+
+  How do you *know* you made a file, though? Not a problem. Let's have a look! 
+
+  Type **ls**
+
+  The output should be 
+  *myfile*
+
+  For fun, let's change directory up one level and look at what's inside that directory:
+
+  **cd ..**
+  **ls**
+
+  The output should be 
+  *[your name] README.md workspace* &mdash; the order might vary, based on where your name falls in the alphabet; that's fine
+
+  Now, change directory back into [your name], and make sure you're in the right place with **pwd**
+
+* more / less
+
+  Let's say you want to know what's in *myfile* without opening it up in *nano*. That's totally doable.
+
+  Type **more myfile**
+
+  And, just to compare,
+
+  Type **less myfile** &mdash; you can escape the screen that comes up by typing **q**
+
+  It turns out, *less* is a bit more complex. For big files, *more* will let you go through it all in order, where *less* will let you scroll through it, both forward and backward. 
+
+* file ?
+
+## Move stuff
+
 * cp
+
+  Oh, but we forgot to add an extension, showing that it's a text file, didn't we? Not a problem. We can copy this file and give it a new name in the process.
+
 * rm
 * mv
-	
-## Look at stuff
-* ls
-* more / less
-* file ?
 
 ## Find stuff
 * grep
