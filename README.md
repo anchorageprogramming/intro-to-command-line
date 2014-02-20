@@ -21,7 +21,7 @@ We'll be using [Nitrous.IO](https://www.nitrous.io). This is a really powerful t
 
 You can set up your account before the workshop, if you want! [Here are directions](https://github.com/anchorageprogramming/intro-to-command-line/blob/master/APW-NitrousIO.pdf?raw=true).
 
-When you have the Nitrous console taking up the full screen, you can continue to the notes below.
+When you have the Nitrous console taking up the full screen, you can continue to the notes below. They can also be [downloaded as a PDF](https://github.com/anchorageprogramming/intro-to-command-line/blob/master/APW-command-line.pdf?raw=true).
 
 ## Navigate
 
