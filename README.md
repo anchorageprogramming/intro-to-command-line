@@ -21,9 +21,13 @@ We'll be using [Nitrous.IO](https://www.nitrous.io). This is a really powerful t
 
 You can set up your account before the workshop, if you want! [Here are directions](https://github.com/anchorageprogramming/intro-to-command-line/blob/master/APW-NitrousIO.pdf?raw=true).
 
-When you have the Nitrous console taking up the full screen, continue to the commands below
+When you have the Nitrous console taking up the full screen, you can continue to the notes below.
 
 ## Navigate
+
+See the white rectangle (or it may display as a blinking cursor, on some browsers)? That's the place where you enter commands, also known as the "command prompt."
+
+In the directions below, when we say "Type **a command**," we want you to type the part in **bold** into the command prompt. Unless we add more information after the **bold** part, go ahead and hit "enter" after each command. There will be a few places where we have you wait, but not many.
 
 * pwd
 
@@ -39,7 +43,8 @@ When you have the Nitrous console taking up the full screen, continue to the com
   Let's say you don't want to be in the */action* directory anymore. You want to go up a level and be in */home*. 
 
   Type **cd ..**
-  Now type **pwd**
+
+  Type **pwd**
 
   The output should be 
   */home*
@@ -47,6 +52,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
   You've changed directories ("cd" - get it?), up a level (that's what ".." means). But what if you didn't really want to do that? What if you think, "No, I want to be in */home/action* now"? No problem!
 
   Type **cd action**
+  
   Type **pwd**
 
   Now, as you can see, you're back where you started, in */home/action*.
@@ -65,10 +71,9 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   It's time to make a text file! There are lots of text editors available&mdash;and lots of strong opinions about which is the best one&mdash;but for today, we're going to use a simple one. It'll work great for anything you want to do, from writing to-do lists to writing code. 
 
-  Type **nano myfile**
-  And then *don't panic* when the screen changes entirely! 
+  Type **nano myfile**  &mdash; (go ahead and hit "enter", but *don't panic* when the screen changes entirely!) 
 
-  You're inside an application, inside the command line. (How cool is that?) As you can see, there are commands along the bottom. Where you see a caret (^), it means you hold down the ctrl key along with that letter to execute that command. But first let's enter some text, before we worry about any of the commands.
+  You're inside an application, on a text-only interface. (How cool is that?) As you can see, there are commands along the bottom. Where you see a caret (^), it means you hold down the ctrl key along with that letter to execute that command. But first let's enter some text, before we worry about any of the commands.
 
   Type **whatever you like**. I typed "Hi, my name is Coral. I like birds and chinchillas and coffee." Pretty much anything will do. 
 
@@ -100,6 +105,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
   For fun, let's change directory up one level and look at what's inside that directory:
 
   **cd ..**
+
   **ls**
 
   The output should be 
@@ -162,7 +168,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
 * mv
 
-  Copying and deleting is a little tedious. There's a way to do the same thing in one step:
+  Copying and deleting every time you want to rename a file is a little tedious. There's a way to do the same thing in one step:
 
   Type **mv myfile.txt mynewfile.txt** &mdash; and then list the contents of the directory; the output should be
   *mynewfile.txt*
@@ -170,7 +176,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
   You just *moved* ("mv" - move) a file. (You might ask why the command isn't "change name," or something. Valid question. This command *is* used for changing filenames, but it is also used for moving files between directories.)
 
   If you want to try copying or moving your file out of */home/action/[your name]* and into */home/action*, for instance, here's the command:
-  **cp mynewfile.txt ../mynewfile.txt** &mdash; you can replace 'cp' with 'mv', but if you do, please move it back by typing **mv ../mynewfile.txt mynewfile.txt**
+  **cp mynewfile.txt ../mynewfile.txt** &mdash; you can replace 'cp' with 'mv' &mdash; and then you can move it back by typing **mv ../mynewfile.txt mynewfile.txt**
 
 ## Find stuff
 
@@ -184,15 +190,19 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
   **ls | more** &mdash; that character in the middle is the horizontal line, usually located above the "enter" key on your keyboard
 
-  *WHOA, RIGHT?* &mdash; This technique is referred to as "piping output to more", which is a very useful thing to keep in your toolbox when you're faced with large files, or, in this case, large output streams from commands. (It is reasonable to have questions about this. Ask!) As you can see, you can hit **enter** to keep scrolling through the whole file list; when you're tired of looking at the list, remember, you can type **q** to get out of *more*.
+  *WHOA, RIGHT?* &mdash; This technique is referred to as "piping output to more", which is a very useful thing to keep in your toolbox when you're faced with large files, or, in this case, large output streams from commands. (It is totally reasonable to have questions about this. Ask!) As you can see, you can hit **enter** to keep scrolling through the whole file list; when you're tired of looking at the list, remember, you can type **q** to get out of *more*.
 
   One more tool for our toolset, before we move on:
 
   Did you see the sequence of files, *pygettext*, *pygettext2.5*, *pygettext2.6*, etc.? (They're later in the alphabet, so you're more likely to see them on an *ls* than on an *ls | more*. No biggie if you don't go looking for them. Just believe me that they're there, OK?)
 
-  Type **more pyg** _and then hit the **tab** key_. &mdash; your command should now say **more pygettext**. That's right; it will try to complete file names for you after you've started typing them, if you hit *tab*. Tab completion is AMAZING. But it's got limits, of course. The file you actually want is pygettext2.7; but because there are multiple files that all start with "pygettext", it completed as far as it could, and you'll have to specify further by finishing the filename yourself. 
+  Type **more pyg** _and then hit the **tab** key_. &mdash; your command should now say **more pygettext**. 
 
-  Make sure the command line says **more pygettext2.7** and hit **enter** &mdash; browse the file if you want, and hit *q* at any point to get out of *more* &mdash; big file, right?
+  That's right; it will try to complete file names for you after you've started typing them, if you hit *tab*. Tab completion is AMAZING and makes every command line user's life better. But it's got limits, of course. The file you actually want is pygettext2.7; but because there are multiple files that all start with "pygettext", it completed as far as it could, and you'll have to specify further by finishing the filename yourself. 
+
+  Make sure the command line says **more pygettext2.7** and hit **enter**
+
+  You can browse the file if you want, and hit *q* at any point to get out of *more* &mdash; big file, right? It would be awful to have to look for a specific word in that file, wouldn't it?
 
 * grep
 
@@ -214,6 +224,8 @@ When you have the Nitrous console taking up the full screen, continue to the com
   Type **grep -n verbose pygettext2.7**
 
   Now the output has line numbers! The *-n* flag told the command *grep* that you want to know what line number each instance of the character string "verbose" appeared on. 
+
+  (There are flags for **ls**; I usually use the flags **a**, **h**, and **l**, so when I list the contents of a directory, I do it by typing **ls -ahl** &mdash; see how the flags are combined? It's fine to go ahead and try that command in this or any directory. **ls -ahl /home/action** will give you a full list of all of the files in the directory we started in, for instance! I also like to use the **-c** tag with **nano**, so that I can see line and column numbers as I work.)
 
 * man
 
@@ -237,7 +249,7 @@ When you have the Nitrous console taking up the full screen, continue to the com
 
 * ctrl-c
 
-  You can stop the current command from running by hitting **ctrl-c** (Need an example of a slow command, so people can try it...)
+  You can stop the current command from running by hitting **ctrl-c**
 
 
   (Special thanks to [Eric](http://acrl.ala.org/techconnect/?p=3248) and [Nicholas](http://www.slideshare.net/nnschiller/shell-tutorial-28653333) for ideas/examples!)
